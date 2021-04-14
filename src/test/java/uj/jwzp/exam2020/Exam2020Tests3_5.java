@@ -35,16 +35,16 @@ public class Exam2020Tests3_5 extends AbstractExamTest {
 
         //add 2nd author and check
         addAuthor(2);
-        checkAuthors(of(1,2));
+        checkAuthors(of(1, 2));
 
         //add 3rd author and check
         addAuthor(3);
-        checkAuthors(of(1,2,3));
+        checkAuthors(of(1, 2, 3));
 
         //delete 2nd book and check
         deleteAuthor(2);
         checkAuthor404(2);
-        checkAuthors(of(1,3));
+        checkAuthors(of(1, 3));
 
         //try delete author 1 and fail
         deleteAuthor400(1);

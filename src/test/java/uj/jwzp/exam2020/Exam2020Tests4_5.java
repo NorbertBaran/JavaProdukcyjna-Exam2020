@@ -41,8 +41,8 @@ public class Exam2020Tests4_5 extends AbstractExamTest {
     @Test
     public void checkAfterPersistence() throws Exception {
         //Check persistence
-        checkAuthors(of(1,2));
-        checkBooks(of(1,2,3,4));
+        checkAuthors(of(1, 2));
+        checkBooks(of(1, 2, 3, 4));
     }
 
 }

@@ -30,7 +30,7 @@ public class Exam2020Tests4 extends AbstractExamTest {
         findBooksByTitle400("x");
         findBooksByTitle("Lord", of(1));
         findBooksByTitle("Winnetou", of());
-        findBooksByTitle("THE", of(1,3));
+        findBooksByTitle("THE", of(1, 3));
     }
 
 }

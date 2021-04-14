@@ -18,15 +18,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class Exam2020Tests3 extends AbstractExamTest {
 
     @Test
-	public void contextLoads() { }
+    public void contextLoads() {
+    }
 
     @Test
     public void checkGreetingMessage() throws Exception {
         mockMvc
-            .perform(get("/greeting"))
-            .andExpect(status().isOk())
-            .andExpect(content().string(containsString("Hello World")))
-            .andDo(print());
+                .perform(get("/greeting"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Hello World")))
+                .andDo(print());
     }
 
     @Test
@@ -44,16 +45,16 @@ public class Exam2020Tests3 extends AbstractExamTest {
         //add 2nd book and check
         addBookNoAuth(2);
         checkBookNoAuthById(2);
-        checkBooksNoAuth(of(1,2));
+        checkBooksNoAuth(of(1, 2));
 
         //add 3rd book and check
         addBookNoAuth(3);
-        checkBooksNoAuth(of(1,2,3));
+        checkBooksNoAuth(of(1, 2, 3));
 
         //delete 2nd book and check
         deleteBook(2);
         checkBook404(2);
-        checkBooksNoAuth(of(1,3));
+        checkBooksNoAuth(of(1, 3));
         checkBookNoAuthById(1);
     }
 
